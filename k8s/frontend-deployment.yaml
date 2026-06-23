@@ -26,10 +26,9 @@ kind: Service
 metadata:
   name: temperaturas-frontend
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
-    app: temperaturas-frontend
+    app: temperaturas-frontend   
   ports:
   - port: 3001
     targetPort: 3001
-    nodePort: 30001
